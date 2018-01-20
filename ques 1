@@ -1,0 +1,10 @@
+def sort():
+    a = []
+    b = int(input("Enter number of words you want to enter"))
+    print("Enter words")
+    for i in range(int(b)):
+        c = input()
+        a.append(c)
+    a.sort(key= len)
+    print(a)
+sort()
