@@ -1,0 +1,16 @@
+def cipher():
+    k = {1:'A', 2:'B', 3:'C', 4:'D', 5:'E', 6:'F', 7:'G', 8:'H', 9:'I', 10:'J', 11:'K', 12:'L', 13:'M', 14:'N', 15:'O',
+        16:'P', 17:'Q', 18:'R', 19:'S', 20:'T', 21:'U', 22:'V', 23:'W', 24:'X', 25:'Y', 26:'Z', 0:'Z'}
+    m = int(input("Enter a value of m: "))
+    n = int(input("Enter a value of n: "))
+    for a in range(m,n+1):
+        x = a//26
+        y = a%26
+        if a<= 26:
+            print(str(k.get(a)))
+        elif a%26 == 0:
+            x = a//26 -1
+            print(str(k.get(x)) + str(k.get(y)))
+        else:
+            print(str(k.get(x))+str(k.get(y)))
+cipher()
